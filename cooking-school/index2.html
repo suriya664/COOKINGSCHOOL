@@ -1,0 +1,1619 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Cooking School Free html template</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <!--Google fonts Link-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,700i" rel="stylesheet">
+        
+        
+        <link rel="stylesheet" href="assets/css/skills/progressbar.css">
+        <link rel="stylesheet" href="assets/css/skills/style.css">
+        <link rel="stylesheet" href="assets/css/fonticons.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+
+        <!--For Plugins external css-->
+        <link rel="stylesheet" href="assets/css/teamslide.css" />
+        <link rel="stylesheet" href="assets/css/plugins.css" />
+
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="assets/css/responsive.css" />
+
+        <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        
+        <style>
+            /* Elegant & International Color Scheme */
+            :root {
+                --primary-wine: #7C2D12;
+                --secondary-ivory: #FFFBF5;
+                --accent-gold: #D97706;
+            }
+            
+            body {
+                background-color: var(--secondary-ivory);
+            }
+            
+            /* Equal height cards */
+            .dashboard-card, .single_item, .single_gellary_item, .class-registration-form, .private-event-form {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .single_item img, .single_gellary_item img {
+                height: 250px;
+                object-fit: cover;
+                width: 100%;
+                border-radius: 8px;
+                transition: transform 0.3s ease;
+            }
+            
+            .single_item img:hover, .single_gellary_item img:hover {
+                transform: scale(1.05);
+            }
+            
+            /* Fallback for missing images */
+            .single_gellary_item {
+                background: linear-gradient(135deg, var(--primary-wine), var(--accent-gold));
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 250px;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .single_gellary_item img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+            .single_gellary_item::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(124, 45, 18, 0.1);
+                z-index: 1;
+            }
+            
+            .gellary_overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(124, 45, 18, 0.8);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                z-index: 2;
+                color: var(--secondary-ivory);
+                text-align: center;
+                padding: 20px;
+            }
+            
+            .single_gellary_item:hover .gellary_overlay {
+                opacity: 1;
+            }
+            
+            .btn-primary {
+                background: var(--primary-wine) !important;
+                border: none;
+                padding: 12px 30px;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                transition: all 0.3s ease;
+            }
+            
+            .btn-primary:hover {
+                background: #5a1f0d !important;
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(124, 45, 18, 0.3);
+            }
+            
+            .head_title h2 {
+                color: var(--primary-wine);
+            }
+            
+            .separator {
+                background: var(--accent-gold);
+                height: 3px;
+                width: 60px;
+                margin: 15px auto;
+            }
+            
+            .navbar-default .navbar-nav > li > a {
+                color: var(--primary-wine) !important;
+                font-weight: 500;
+                transition: color 0.3s ease;
+            }
+            
+            .navbar-default .navbar-nav > li > a:hover {
+                color: var(--accent-gold) !important;
+            }
+            
+            .main_home h1 {
+                color: var(--primary-wine);
+            }
+            
+            .single_service h3 {
+                color: var(--primary-wine);
+            }
+            
+            .classes, .private-events {
+                background: var(--secondary-ivory);
+                padding: 30px 0;
+            }
+            
+            /* Reduce empty space between sections */
+            .sections {
+                padding: 30px 0 !important;
+                margin-bottom: 0 !important;
+            }
+            
+            section {
+                padding: 30px 0 !important;
+            }
+            
+            .main_footer {
+                margin-top: 0 !important;
+                padding-top: 5px !important;
+                margin-bottom: 10px !important;
+            }
+            
+            .class-registration-form, .private-event-form {
+                background: white;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 4px 15px rgba(124, 45, 18, 0.1);
+                margin: 20px 0;
+                border-top: 4px solid var(--primary-wine);
+                overflow: hidden; /* Prevent text overflow */
+            }
+            
+            .class-registration-form h3, .private-event-form h3 {
+                color: var(--primary-wine);
+                margin-bottom: 30px;
+                font-weight: 600;
+            }
+            
+            /* Form layout fixes */
+            .class-registration-form .row, .private-event-form .row {
+                margin-bottom: 20px;
+            }
+            
+            .class-registration-form .form-group, .private-event-form .form-group {
+                margin-bottom: 20px;
+                overflow: hidden;
+            }
+            
+            .class-registration-form label, .private-event-form label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: 600;
+                color: var(--primary-wine);
+            }
+            
+            .class-registration-form .form-control, .private-event-form .form-control {
+                width: 100%;
+                padding: 12px;
+                border: 2px solid #e0e0e0;
+                border-radius: 4px;
+                font-size: 14px;
+                transition: all 0.3s ease;
+                box-sizing: border-box; /* Prevent overflow */
+            }
+            
+            .class-registration-form .form-control:focus, .private-event-form .form-control:focus {
+                border-color: var(--accent-gold);
+                box-shadow: 0 0 0 0.2rem rgba(217, 119, 6, 0.25);
+                outline: none;
+            }
+            
+            .class-registration-form select, .private-event-form select {
+                width: 100%;
+                padding: 12px;
+                border: 2px solid #e0e0e0;
+                border-radius: 4px;
+                font-size: 14px;
+                background-color: white;
+                box-sizing: border-box;
+            }
+            
+            .class-registration-form textarea, .private-event-form textarea {
+                width: 100%;
+                padding: 12px;
+                border: 2px solid #e0e0e0;
+                border-radius: 4px;
+                font-size: 14px;
+                min-height: 120px;
+                resize: vertical;
+                box-sizing: border-box;
+            }
+            
+            .form-group label {
+                font-weight: 600;
+                color: var(--primary-wine);
+                margin-bottom: 8px;
+            }
+            
+            .form-control {
+                border: 2px solid #e0e0e0;
+                border-radius: 4px;
+                padding: 12px;
+                font-size: 14px;
+                transition: all 0.3s ease;
+            }
+            
+            .form-control:focus {
+                border-color: var(--accent-gold);
+                box-shadow: 0 0 0 0.2rem rgba(217, 119, 6, 0.25);
+            }
+            
+            .class-info, .event-info {
+                margin-top: 40px;
+                padding: 30px;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 4px 15px rgba(124, 45, 18, 0.1);
+            }
+            
+            .info-box, .package-box {
+                padding: 20px;
+                background: var(--secondary-ivory);
+                border-radius: 6px;
+                margin-bottom: 20px;
+                border-left: 4px solid var(--accent-gold);
+            }
+            
+            .info-box h5, .package-box h5 {
+                color: var(--primary-wine);
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+            
+            .info-box i {
+                color: var(--accent-gold);
+                margin-right: 8px;
+            }
+            
+            .success-message {
+                background: #d4edda;
+                color: #155724;
+                padding: 15px;
+                border-radius: 4px;
+                margin-bottom: 20px;
+                border: 1px solid #c3e6cb;
+                display: none;
+            }
+            
+            .error-message {
+                background: #f8d7da;
+                color: #721c24;
+                padding: 15px;
+                border-radius: 4px;
+                margin-bottom: 20px;
+                border: 1px solid #f5c6cb;
+                display: none;
+            }
+            
+            /* Header background */
+            .main_menu_bg {
+                background: white !important;
+                box-shadow: 0 2px 10px rgba(124, 45, 18, 0.1);
+            }
+            
+            /* Navbar logo styling */
+            .navbar-brand img {
+                height: 50px !important;
+                width: auto !important;
+                display: inline-block !important;
+                margin-right: 10px !important;
+                vertical-align: middle !important;
+                border: 2px solid var(--accent-gold) !important;
+                border-radius: 8px !important;
+                padding: 3px !important;
+                background: white !important;
+                box-shadow: 0 2px 8px rgba(124, 45, 18, 0.2) !important;
+            }
+            
+            .navbar-brand {
+                padding: 10px 15px !important;
+                display: flex !important;
+                align-items: center !important;
+                text-decoration: none !important;
+                transition: all 0.3s ease !important;
+            }
+            
+            .brand-text {
+                color: var(--primary-wine) !important;
+                font-size: 22px !important;
+                font-weight: 700 !important;
+                font-family: 'Roboto', sans-serif !important;
+                vertical-align: middle !important;
+                line-height: 40px !important;
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.1) !important;
+            }
+            
+            .navbar-brand:hover .brand-text {
+                color: var(--accent-gold) !important;
+            }
+            
+            .navbar-brand:hover img {
+                border-color: var(--primary-wine) !important;
+                transform: scale(1.05) !important;
+            }
+            
+            /* Navbar button styling */
+            .btn-login-nav, .btn-register-nav {
+                background: var(--primary-wine) !important;
+                color: var(--secondary-ivory) !important;
+                padding: 8px 16px !important;
+                border-radius: 20px !important;
+                margin: 0 5px !important;
+                text-decoration: none !important;
+                transition: all 0.3s ease !important;
+                font-weight: 600 !important;
+                font-size: 14px !important;
+                border: 2px solid var(--primary-wine) !important;
+                display: inline-block !important;
+            }
+            
+            .btn-login-nav:hover, .btn-register-nav:hover {
+                background: transparent !important;
+                color: var(--primary-wine) !important;
+                transform: translateY(-2px) !important;
+                box-shadow: 0 5px 15px rgba(124, 45, 18, 0.3) !important;
+            }
+            
+            .btn-register-nav {
+                background: var(--accent-gold) !important;
+                border-color: var(--accent-gold) !important;
+            }
+            
+            .btn-register-nav:hover {
+                color: var(--accent-gold) !important;
+                background: transparent !important;
+                box-shadow: 0 5px 15px rgba(217, 119, 6, 0.3) !important;
+            }
+            
+            /* Footer styling */
+            .footer_widget {
+                background: var(--primary-wine) !important;
+                color: var(--secondary-ivory);
+            }
+            
+            .footer_widget h4 {
+                color: var(--secondary-ivory) !important;
+            }
+            
+            .footer_widget a {
+                color: var(--secondary-ivory) !important;
+            }
+            
+            .footer_widget a:hover {
+                color: var(--accent-gold) !important;
+            }
+            
+            .footer {
+                background: #5a1f0d !important;
+                color: var(--secondary-ivory);
+            }
+            
+            .footer a {
+                color: var(--secondary-ivory) !important;
+            }
+            
+            .footer a:hover {
+                color: var(--accent-gold) !important;
+            }
+        </style>
+    </head>
+    <body data-spy="scroll" data-target=".navbar-collapse">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header id="main_menu" class="header navbar-fixed-top">            
+            <div class="main_menu_bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="nave_menu">
+                            <nav class="navbar navbar-default" id="navmenu">
+                                <div class="container-fluid">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+                                        <a class="navbar-brand" href="#home" style="display: flex !important; align-items: center !important; padding: 10px 15px !important; text-decoration: none !important;">
+                                            <span style="color: #7C2D12 !important; font-size: 22px !important; font-weight: 700 !important; font-family: Arial, sans-serif !important; white-space: nowrap !important;">Cooking School</span>
+                                        </a>
+                                    </div>
+
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+
+
+
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li><a href="#home">Home</a></li>
+                                            <li><a href="#service">Recipes</a></li>
+                                            <li><a href="#about"> About us</a></li>
+                                            <li><a href="#team">Blog</a></li>
+                                            
+                                            <li><a href="#contact">Contact</a></li>
+                                            <li><a href="dashboard.html">Dashboard</a></li>
+                                            <li><a href="login.html" style="background: #7C2D12 !important; color: white !important; padding: 8px 16px !important; border-radius: 5px !important; margin-left: 10px !important; text-decoration: none !important; font-weight: bold !important; display: inline-block !important;">Login</a></li>
+                                            <li><a href="register.html" style="background: #D97706 !important; color: white !important; padding: 8px 16px !important; border-radius: 5px !important; margin-left: 5px !important; text-decoration: none !important; font-weight: bold !important; display: inline-block !important;">Register</a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </nav>
+                        </div>	
+                    </div>
+
+                </div>
+
+            </div>
+        </header> <!--End of header -->
+
+
+
+
+
+        <section id="home" class="home">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 ">
+                            <div class="main_home_slider">
+                                <div class="single_home_slider">
+                                    <div class="main_home wow fadeInUp" data-wow-duration="700ms">
+                                        <h1>COOKING SCHOOL FREE PSD TEMPLATE</h1>
+                                        <p class="subtitle">graphicsdrawer.com</p>
+
+                                        <div class="home_btn">
+                                            <a href="" class="btn btn-primary">LEARN MORE</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="single_home_slider">
+                                    <div class="main_home wow fadeInUp" data-wow-duration="700ms">
+                                        <h1>COOKING SCHOOL FREE PSD TEMPLATE</h1>
+                                        <p class="subtitle">graphicsdrawer.com</p>
+
+                                        <div class="home_btn">
+                                            <a href="" class="btn btn-primary">LEARN MORE</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="single_home_slider">
+                                    <div class="main_home wow fadeInUp" data-wow-duration="700ms">
+                                        <h1>COOKING SCHOOL FREE PSD TEMPLATE</h1>
+                                        <p class="subtitle">graphicsdrawer.com</p>
+
+                                        <div class="home_btn">
+                                            <a href="" class="btn btn-primary">LEARN MORE</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section id="service" class="service">
+            <div class="container">
+                <div class="row">
+                    <div class="service_border_raund text-center"></div>
+                    <div class="main_service_area sections text-center">
+                        <div class="head_title text-center">
+                            <h2>what we do?</h2>
+                            <div class="separator"></div>
+
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="single_service">
+                                <div class="single_service_icon">
+                                    <img src="assets/images/service.png" alt="" />
+                                </div>
+
+                                <h3>HAMBURGERS</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur convallis nunc, at ullamcorper turpis gravida nec. 
+                                    Praesent eu ultrices nunc.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="single_service">
+                                <div class="single_service_icon">
+                                     <img src="assets/images/service2.png" alt="" />
+                                </div>
+
+                                <h3>muffins</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur convallis nunc, at ullamcorper turpis gravida nec. 
+                                    Praesent eu ultrices nunc.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="single_service">
+                                <div class="single_service_icon">
+                                    <img src="assets/images/service3.png" alt="" />
+                                </div>
+
+                                <h3>salt and pepper</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur convallis nunc, at ullamcorper turpis gravida nec. 
+                                    Praesent eu ultrices nunc.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="video" class="video">
+            <div class="home-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_video_area sections text-center">
+                            <div class="head_title">  
+                                <i class="fa fa-film"></i>
+                                <h4>CHECK OUR VIDEO TUTORIALS</h4>
+                            </div>
+                            <div class="main_video_content">
+                                <div class="col-sm-4">
+                                    <div class="single_video">
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_l6CQRHIGyg"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="single_video">
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_l6CQRHIGyg"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="single_video">
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_l6CQRHIGyg"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="portfolio_btn_area">
+                                <a href="" class="btn btn-larg">CHECK OUR CHANNEL</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="main_about sections">
+
+                        <div class="main_about_content_area">
+                            <div class="single_about_left_img">
+                                <img src="assets/images/ab.jpg" alt="" />
+                            </div> 
+
+
+                            <!-- bar 1 -->
+                            <div class="col-sm-8 col-sm-offset-4">
+                                <div class="single_about_right_content">
+                                    <div class="demo4">
+                                        <div class="right_single_about_skill">
+                                            <div class="right_about_top_cotent">
+                                                <div class="right_about_top_img">
+                                                    <img src="assets/images/s_ab1.png" alt="" />
+                                                </div>
+                                                <div class="right_about_top_content">
+                                                    <h3>COOKCING BOOK</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur convallis nunc, 
+                                                        at ullamcorper turpis gravida nec. Praesent eu ultrices nunc.</p>
+                                                </div>
+                                            </div>
+                                            <div class="right_about_bottom_cotent">
+                                                <!-- bar 1 -->
+                                                <div class="progress-bar4" data-percentage="76%">
+                                                    <h4 class="progress-title-holder">
+                                                        <span class="progress-number-wrapper">
+                                                            <span class="progress-number-mark">
+                                                                <span class="percent"></span>
+                                                                <span class="down-arrow"></span>
+                                                            </span>
+                                                        </span>
+                                                    </h4>
+                                                    <div class="progress-content-outter">
+                                                        <div class="progress-content"></div>
+                                                    </div>
+                                                </div> 
+
+                                            </div>
+                                        </div>
+
+                                        <div class="right_single_about_skill">
+                                            <div class="right_about_top_cotent">
+                                                <div class="right_about_top_img">
+                                                    <img src="assets/images/s_ab2.png" alt="" />
+                                                </div>
+                                                <div class="right_about_top_content">
+                                                    <h3>COOKCING BOOK</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur convallis nunc, 
+                                                        at ullamcorper turpis gravida nec. Praesent eu ultrices nunc.</p>
+                                                </div>
+                                            </div>
+                                            <div class="right_about_bottom_cotent">
+                                                <!-- bar 2 -->
+                                                <div class="progress-bar4" data-percentage="43%">
+                                                    <h4 class="progress-title-holder">
+                                                        <span class="progress-number-wrapper">
+                                                            <span class="progress-number-mark">
+                                                                <span class="percent"></span>
+                                                                <span class="down-arrow"></span>
+                                                            </span>
+                                                        </span>
+                                                    </h4>
+                                                    <div class="progress-content-outter">
+                                                        <div class="progress-content"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="right_single_about_skill">
+                                            <div class="right_about_top_cotent">
+                                                <div class="right_about_top_img">
+                                                    <img src="assets/images/s_ab3.png" alt="" />
+                                                </div>
+                                                <div class="right_about_top_content">
+                                                    <h3>COOKCING BOOK</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur convallis nunc, 
+                                                        at ullamcorper turpis gravida nec. Praesent eu ultrices nunc.</p>
+                                                </div>
+                                            </div>
+                                            <div class="right_about_bottom_cotent">
+                                                <!-- bar 3 -->
+                                                <div class="progress-bar4" data-percentage="92%">
+                                                    <h4 class="progress-title-holder">
+                                                        <span class="progress-number-wrapper">
+                                                            <span class="progress-number-mark">
+                                                                <span class="percent"></span>
+                                                                <span class="down-arrow"></span>
+                                                            </span>
+                                                        </span>
+                                                    </h4>
+                                                    <div class="progress-content-outter">
+                                                        <div class="progress-content"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>   
+
+                            </div>
+                        </div>
+                    </div>                    
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="pepper" class="pepper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="main_pepper text-center">
+                        <div class="col-sm-5 col-sm-offset-1">
+                            <div class="single_pepper">
+                                <h5>salt and pepper</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    In consectetur convallis nunc, at ullamcorper turpis 
+                                    gravida nec. Praesent eu ultrices nunc.</p>
+                                <a href="" class="btn btn-md">SUBSCRIBE</a>
+                            </div>
+                            <div class="single_pepper">
+                                <h5>salt and pepper</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    In consectetur convallis nunc, at ullamcorper turpis 
+                                    gravida nec. Praesent eu ultrices nunc.</p>
+                                <a href="" class="btn btn-md">SUBSCRIBE</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 no-padding">
+                            <div class="single_pepper_right">
+                                <img src="assets/images/pepper.jpg" alt="" /> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="team" class="team">
+            <div class="container">
+                <div class="row">
+                    <div class="main_team sections">
+                        <div class="head_title text-center">
+                            <h2>OUR TEAM</h2>
+                            <div class="separator"></div>
+                            <p>Meet our passionate culinary experts who bring years of experience and creativity to every dish. 
+                                Our team of professional chefs and instructors is dedicated to sharing their knowledge and inspiring 
+                                your culinary journey with authentic techniques and innovative recipes.</p>
+
+                        </div>
+      
+                        
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="main_team_content">  
+                                    <div class="single_team">
+                                        <div class="col-sm-3 col-xs-6">
+                                            <div class="single_item">
+                                                <img src="assets/images/team1.jpg" alt="Marco Rossi" />
+                                                <div class="single_team_overlay">
+                                                    <h4>Marco Rossi</h4>
+                                                    <p>Executive Chef</p>
+                                                    <div class="team_socail">
+                                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                                        <a href="#"><i class="fa fa-instagram"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <div class="col-sm-3 col-xs-6">
+                                            <div class="single_item">
+                                                <img src="assets/images/team2.jpg" alt="Sophie Laurent" />
+                                                <div class="single_team_overlay">
+                                                    <h4>Sophie Laurent</h4>
+                                                    <p>Pastry Chef</p>
+                                                    <div class="team_socail">
+                                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                                        <a href="#"><i class="fa fa-instagram"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <div class="col-sm-3 col-xs-6">
+                                            <div class="single_item">
+                                                <img src="assets/images/team3.jpg" alt="James Chen" />
+                                                <div class="single_team_overlay">
+                                                    <h4>James Chen</h4>
+                                                    <p>Sous Chef</p>
+                                                    <div class="team_socail">
+                                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                                        <a href="#"><i class="fa fa-instagram"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <div class="col-sm-3 col-xs-6">
+                                            <div class="single_item">
+                                                <img src="assets/images/team4.jpg" alt="Isabella Martinez" />
+                                                <div class="single_team_overlay">
+                                                    <h4>Isabella Martinez</h4>
+                                                    <p>Culinary Instructor</p>
+                                                    <div class="team_socail">
+                                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                                        <a href="#"><i class="fa fa-instagram"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="single_team">
+                                        <div class="col-sm-3 col-xs-6">
+                                            <div class="single_item">
+                                                <img src="assets/images/team5.jpg" alt="David Thompson" />
+                                                <div class="single_team_overlay">
+                                                    <h4>David Thompson</h4>
+                                                    <p>Master Chef</p>
+                                                    <div class="team_socail">
+                                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                                        <a href="#"><i class="fa fa-instagram"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <div class="col-sm-3 col-xs-6">
+                                            <div class="single_item">
+                                                <img src="assets/images/team6.jpg" alt="Emma Wilson" />
+                                                <div class="single_team_overlay">
+                                                    <h4>Emma Wilson</h4>
+                                                    <p>Baking Specialist</p>
+                                                    <div class="team_socail">
+                                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                                        <a href="#"><i class="fa fa-instagram"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <div class="col-sm-3 col-xs-6">
+                                            <div class="single_item">
+                                                <img src="assets/images/team7.jpg" alt="Roberto Silva" />
+                                                <div class="single_team_overlay">
+                                                    <h4>Roberto Silva</h4>
+                                                    <p>International Cuisine Expert</p>
+                                                    <div class="team_socail">
+                                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                                        <a href="#"><i class="fa fa-instagram"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <div class="col-sm-3 col-xs-6">
+                                            <div class="single_item">
+                                                <img src="assets/images/team8.jpg" alt="Yuki Tanaka" />
+                                                <div class="single_team_overlay">
+                                                    <h4>Yuki Tanaka</h4>
+                                                    <p>Sushi Master</p>
+                                                    <div class="team_socail">
+                                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                                        <a href="#"><i class="fa fa-instagram"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="classes" class="classes sections">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="head_title text-center">
+                            <h2>COOKING CLASSES</h2>
+                            <div class="separator"></div>
+                            <p>Join our hands-on cooking classes and learn from professional chefs</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div class="class-registration-form">
+                            <h3 class="text-center">Register for a Class</h3>
+                            <form id="classRegistrationForm" action="#" method="POST">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="firstName">First Name *</label>
+                                            <input type="text" class="form-control" id="firstName" name="firstName" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="lastName">Last Name *</label>
+                                            <input type="text" class="form-control" id="lastName" name="lastName" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="email">Email *</label>
+                                            <input type="email" class="form-control" id="email" name="email" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="phone">Phone Number *</label>
+                                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="classType">Class Type *</label>
+                                    <select class="form-control" id="classType" name="classType" required>
+                                        <option value="">Select a class...</option>
+                                        <option value="italian">Italian Cuisine Mastery</option>
+                                        <option value="french">French Pastry Fundamentals</option>
+                                        <option value="asian">Asian Fusion Techniques</option>
+                                        <option value="baking">Artisan Bread Making</option>
+                                        <option value="vegetarian">Vegetarian & Vegan Cooking</option>
+                                        <option value="seafood">Seafood Preparation</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="preferredDate">Preferred Date *</label>
+                                            <input type="date" class="form-control" id="preferredDate" name="preferredDate" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="participants">Number of Participants *</label>
+                                            <select class="form-control" id="participants" name="participants" required>
+                                                <option value="1">1 Person</option>
+                                                <option value="2">2 People</option>
+                                                <option value="3">3 People</option>
+                                                <option value="4">4 People</option>
+                                                <option value="5">5+ People</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="experience">Cooking Experience Level</label>
+                                    <select class="form-control" id="experience" name="experience">
+                                        <option value="beginner">Beginner</option>
+                                        <option value="intermediate">Intermediate</option>
+                                        <option value="advanced">Advanced</option>
+                                        <option value="professional">Professional</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="dietary">Dietary Restrictions or Special Requirements</label>
+                                    <textarea class="form-control" id="dietary" name="dietary" rows="3" placeholder="Please let us know about any allergies or dietary restrictions..."></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="questions">Questions or Comments</label>
+                                    <textarea class="form-control" id="questions" name="questions" rows="3" placeholder="Any questions about the class?"></textarea>
+                                </div>
+                                
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">Register for Class</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="class-info">
+                            <h4>Class Information</h4>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="info-box">
+                                        <h5><i class="fa fa-clock-o"></i> Duration</h5>
+                                        <p>3-4 hours per session</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="info-box">
+                                        <h5><i class="fa fa-users"></i> Class Size</h5>
+                                        <p>Maximum 12 students</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="info-box">
+                                        <h5><i class="fa fa-certificate"></i> Certificate</h5>
+                                        <p>Certificate of completion</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="private-events" class="private-events sections">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="head_title text-center">
+                            <h2>PRIVATE EVENTS</h2>
+                            <div class="separator"></div>
+                            <p>Host an unforgettable private cooking experience for your group</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div class="private-event-form">
+                            <h3 class="text-center">Private Event Inquiry</h3>
+                            <form id="privateEventForm" action="#" method="POST">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="eventFirstName">First Name *</label>
+                                            <input type="text" class="form-control" id="eventFirstName" name="eventFirstName" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="eventLastName">Last Name *</label>
+                                            <input type="text" class="form-control" id="eventLastName" name="eventLastName" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="eventEmail">Email *</label>
+                                            <input type="email" class="form-control" id="eventEmail" name="eventEmail" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="eventPhone">Phone Number *</label>
+                                            <input type="tel" class="form-control" id="eventPhone" name="eventPhone" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="eventType">Event Type *</label>
+                                    <select class="form-control" id="eventType" name="eventType" required>
+                                        <option value="">Select event type...</option>
+                                        <option value="corporate">Corporate Team Building</option>
+                                        <option value="birthday">Birthday Celebration</option>
+                                        <option value="bachelorette">Bachelorette Party</option>
+                                        <option value="family">Family Gathering</option>
+                                        <option value="wedding">Wedding Shower</option>
+                                        <option value="custom">Custom Private Event</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="eventDate">Preferred Event Date *</label>
+                                            <input type="date" class="form-control" id="eventDate" name="eventDate" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="eventTime">Preferred Time *</label>
+                                            <select class="form-control" id="eventTime" name="eventTime" required>
+                                                <option value="">Select time...</option>
+                                                <option value="morning">Morning (9:00 AM - 12:00 PM)</option>
+                                                <option value="afternoon">Afternoon (1:00 PM - 4:00 PM)</option>
+                                                <option value="evening">Evening (6:00 PM - 9:00 PM)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="guestCount">Number of Guests *</label>
+                                            <input type="number" class="form-control" id="guestCount" name="guestCount" min="8" max="50" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="budget">Budget Range</label>
+                                            <select class="form-control" id="budget" name="budget">
+                                                <option value="">Select budget...</option>
+                                                <option value="500-1000">$500 - $1,000</option>
+                                                <option value="1000-2000">$1,000 - $2,000</option>
+                                                <option value="2000-3000">$2,000 - $3,000</option>
+                                                <option value="3000+">$3,000+</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="cuisinePreference">Cuisine Preference</label>
+                                    <select class="form-control" id="cuisinePreference" name="cuisinePreference">
+                                        <option value="">No preference</option>
+                                        <option value="italian">Italian</option>
+                                        <option value="french">French</option>
+                                        <option value="asian">Asian</option>
+                                        <option value="mediterranean">Mediterranean</option>
+                                        <option value="american">American</option>
+                                        <option value="mexican">Mexican</option>
+                                        <option value="fusion">Fusion</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="eventDetails">Event Details & Special Requests</label>
+                                    <textarea class="form-control" id="eventDetails" name="eventDetails" rows="4" placeholder="Tell us more about your event vision, any special requirements, or dietary restrictions..."></textarea>
+                                </div>
+                                
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">Submit Inquiry</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="event-info">
+                            <h4>Private Event Packages</h4>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="package-box">
+                                        <h5>Basic Package</h5>
+                                        <p>3-hour cooking class for up to 12 guests</p>
+                                        <p><strong>Includes:</strong> Ingredients, chef instruction, recipes</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="package-box">
+                                        <h5>Premium Package</h5>
+                                        <p>4-hour cooking class for up to 20 guests</p>
+                                        <p><strong>Includes:</strong> All basic features + wine pairing, appetizers</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="package-box">
+                                        <h5>Luxury Package</h5>
+                                        <p>Full-day experience for up to 50 guests</p>
+                                        <p><strong>Includes:</strong> All premium features + custom menu, take-home gifts</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact sections">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="head_title text-center">
+                            <h2>CONTACT US VERY FAST!</h2>
+                            <div class="separator"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="contact_contant">
+                                <div class="col-sm-6">
+                                    <div class="single_contant_left">
+                                        <form action="#" id="formid">
+                                            <!--<div class="col-lg-8 col-md-8 col-sm-10 col-lg-offset-2 col-md-offset-2 col-sm-offset-1">-->
+
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="name" placeholder="first name" required="">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" name="email" placeholder="Email" required="">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <textarea class="form-control" name="message" rows="8" placeholder="Message"></textarea>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <input type="submit" value="SEND MESSAGE" class="btn btn-primary">
+                                            </div>
+                                            <!--</div>--> 
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="single_message_right">
+                                        <h4>About Us</h4>
+                                        <div class="separator4"></div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Ut iaculis et eros a porta. Cras lacinia consequat ante et pulvinar. 
+                                        </p>
+                                        <p>Morbi efficitur, arcu ut eleifend viverra, est lorem hendrerit arcu, 
+                                            vel finibus lectus quam sit amet mauris.</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="single_message_right_info">
+                                        <h4>Info</h4>
+                                        <div class="separator4"></div>
+                                        <ul>
+                                            <li><a href=""><i class="fa fa-envelope"></i> info@graphicsdrawer.com</a></li>
+                                            <li><a href=""><i class="fa fa-phone"></i> 0123 456 789 0112</a></li>
+                                            <li><a href=""><i class="fa fa-map-marker"></i> Greenplatz Ben 29, Germany 60435</a></li>
+                                            <li><a href=""><i class="fa fa-fax"></i> (0012) 654 356 445</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> <!-- End of messsage contant-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="map" class="map">  
+            <div class="ourmaps">
+                <div class="container">
+
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="contact" class="footer_widget">
+            <div class="container">
+                <div class="row">
+                    <div class="main_widget">
+                         <div class="col-sm-4  col-xs-12">
+                                <div class="single_widget wow fadeIn" data-wow-duration="800ms">
+                                    <div class="footer_logo">
+                                        <h3 style="color: #FFFBF5 !important; text-align: center !important; margin-bottom: 20px !important;">Cooking School</h3>
+                                    </div>
+                                    <p>Explore our culinary journey through these moments of cooking excellence and student achievements.</p>
+                                    <p>Nullam fringilla pharetra diam non accumsan. Morbi eget aliquam mauris. 
+                                        Etiam vehicula efficitur mi.</p>
+                                </div>
+                            </div>
+
+ <div class="col-sm-4 col-xs-12">
+                                <div class="single_widget wow fadeIn" data-wow-duration="800ms">
+                                    <h4 class="footer_title">LATEST NEWS</h4>
+                                    <div class="separator4"></div>
+
+                                    <div class="footer_gellary">
+                                        <img src="assets/images/fg1.jpg" alt="" />
+                                        <img src="assets/images/fg2.jpg" alt="" />
+                                        <img src="assets/images/fg3.jpg" alt="" />
+                                        <img src="assets/images/fg4.jpg" alt="" />
+                                        <img src="assets/images/fg5.jpg" alt="" />
+                                        <img src="assets/images/fg6.jpg" alt="" />
+                                        <img src="assets/images/fg7.jpg" alt="" />
+                                        <img src="assets/images/fg8.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="row">
+
+                            <div class="col-sm-4  col-xs-12">
+                                <div class="single_widget wow fadeIn" data-wow-duration="800ms">
+                                    <h4 class="footer_title">CONTACT</h4>
+                                    <div class="separator4"></div>
+                                    <ul>
+                                        <li><a href=""><i class="fa fa-envelope"></i> info@guitarchoose.com</a></li>
+                                        <li><a href=""><i class="fa fa-phone"></i> 0123 456 789 0112</a></li>
+                                        <li><a href=""><i class="fa fa-map-marker"></i> Greenplatz Ben 29, Germany 60435</a></li>
+                                        <li><a href=""><i class="fa fa-fax"></i> (0012) 654 356 445</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                           
+
+                            
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer" class="footer">
+            <div class="container">
+                <div class="main_footer">
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12 text-center">
+                            <div class="copyright_text">
+                                <p class=" wow fadeInRight" data-wow-duration="1s">© 2026 Cooking School. All Rights Reserved</p>
+                            </div>
+                            <div class="footer_socail">
+                                <a href=""><i class="fa fa-facebook"></i></a>
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                                <a href=""><i class="fa fa-google-plus"></i></a>
+                                <a href=""><i class="fa fa-rss"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+        <!-- START SCROLL TO TOP  -->
+
+        <div class="scrollup">
+            <a href="#"><i class="fa fa-chevron-up"></i></a>
+        </div>
+
+        <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+        <script src="assets/js/jquery.easypiechart.min.js"></script>
+        <script src="assets/js/jquery.mixitup.min.js"></script>
+        <script src="assets/js/jquery.easing.1.3.js"></script>
+        <script src="assets/css/skills/inview.min.js"></script>
+        <script src="assets/css/skills/progressbar.js"></script>
+        <script src="assets/css/skills/main.js"></script>
+        
+        <!--This is link only for gmaps-->
+        <script src="http://maps.google.com/maps/api/js"></script>
+        <script src="assets/js/gmaps.min.js"></script>
+        <script>
+            var map = new GMaps({
+                el: '.ourmaps',
+                scrollwheel: false,
+                lat: 13.0827,
+                lng: 80.2707
+            });
+        </script>
+
+
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
+
+        <script>
+            // Class Registration Form Handler
+            document.getElementById('classRegistrationForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Hide any existing messages
+                document.getElementById('classSuccessMessage').style.display = 'none';
+                document.getElementById('classErrorMessage').style.display = 'none';
+                
+                // Basic form validation
+                const firstName = document.getElementById('firstName').value.trim();
+                const lastName = document.getElementById('lastName').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const classType = document.getElementById('classType').value;
+                const preferredDate = document.getElementById('preferredDate').value;
+                const participants = document.getElementById('participants').value;
+                
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                // Phone validation (basic)
+                const phoneRegex = /^[\d\s\-\+\(\)]+$/;
+                
+                if (!firstName || !lastName || !email || !phone || !classType || !preferredDate || !participants) {
+                    return;
+                }
+                
+                if (!emailRegex.test(email)) {
+                    return;
+                }
+                
+                if (!phoneRegex.test(phone)) {
+                    return;
+                }
+                
+                // Validate date is not in the past
+                const selectedDate = new Date(preferredDate);
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
+                
+                if (selectedDate < today) {
+                    return;
+                }
+                
+                // Simulate form submission (in real implementation, this would send to a server)
+                const formData = {
+                    firstName: firstName,
+                    lastName: lastName,
+                    email: email,
+                    phone: phone,
+                    classType: classType,
+                    preferredDate: preferredDate,
+                    participants: participants,
+                    experience: document.getElementById('experience').value,
+                    dietary: document.getElementById('dietary').value,
+                    questions: document.getElementById('questions').value,
+                    submittedAt: new Date().toISOString()
+                };
+                
+                console.log('Class Registration Data:', formData);
+                
+                // Save to localStorage for admin dashboard
+                const registrations = JSON.parse(localStorage.getItem('classRegistrations') || '[]');
+                registrations.push(formData);
+                localStorage.setItem('classRegistrations', JSON.stringify(registrations));
+                
+                // Reset form
+                this.reset();
+            });
+            
+            // Private Event Form Handler
+            document.getElementById('privateEventForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const firstName = document.getElementById('eventFirstName').value;
+                const lastName = document.getElementById('eventLastName').value;
+                const email = document.getElementById('eventEmail').value;
+                const phone = document.getElementById('eventPhone').value;
+                const eventType = document.getElementById('eventType').value;
+                const eventDate = document.getElementById('eventDate').value;
+                const eventTime = document.getElementById('eventTime').value;
+                const guestCount = document.getElementById('guestCount').value;
+                
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                // Phone validation (basic)
+                const phoneRegex = /^[\d\s\-\+\(\)]+$/;
+                
+                if (!firstName || !lastName || !email || !phone || !eventType || !eventDate || !eventTime || !guestCount) {
+                    return;
+                }
+                
+                if (!emailRegex.test(email)) {
+                    return;
+                }
+                
+                if (!phoneRegex.test(phone)) {
+                    return;
+                }
+                
+                // Validate guest count
+                if (guestCount < 8 || guestCount > 50) {
+                    return;
+                }
+                
+                // Validate date is not in the past
+                const selectedDate = new Date(eventDate);
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
+                
+                if (selectedDate < today) {
+                    return;
+                }
+                
+                // Simulate form submission (in real implementation, this would send to a server)
+                const formData = {
+                    firstName: firstName,
+                    lastName: lastName,
+                    email: email,
+                    phone: phone,
+                    eventType: eventType,
+                    eventDate: eventDate,
+                    eventTime: eventTime,
+                    guestCount: guestCount,
+                    budget: document.getElementById('budget').value,
+                    cuisinePreference: document.getElementById('cuisinePreference').value,
+                    eventDetails: document.getElementById('eventDetails').value,
+                    submittedAt: new Date().toISOString()
+                };
+                
+                console.log('Private Event Inquiry Data:', formData);
+                
+                // Save to localStorage for admin dashboard
+                const inquiries = JSON.parse(localStorage.getItem('eventInquiries') || '[]');
+                inquiries.push(formData);
+                localStorage.setItem('eventInquiries', JSON.stringify(inquiries));
+                
+                // Reset form
+                this.reset();
+            });
+            
+            // Set minimum date for date inputs to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('preferredDate').setAttribute('min', today);
+            document.getElementById('eventDate').setAttribute('min', today);
+            
+            // Check if user is logged in and update navigation
+            function updateNavigation() {
+                const currentUser = localStorage.getItem('currentUser');
+                const nav = document.querySelector('.nav.navbar-nav.navbar-right');
+                
+                if (currentUser) {
+                    const user = JSON.parse(currentUser);
+                    // Remove Login/Register links
+                    const loginLink = nav.querySelector('li a[href="login.html"]');
+                    const registerLink = nav.querySelector('li a[href="register.html"]');
+                    
+                    if (loginLink) loginLink.parentElement.remove();
+                    if (registerLink) registerLink.parentElement.remove();
+                    
+                    // Add Dashboard and Logout links
+                    const dashboardLi = document.createElement('li');
+                    dashboardLi.innerHTML = `<a href="dashboard.html">Dashboard</a>`;
+                    nav.appendChild(dashboardLi);
+                    
+                    const logoutLi = document.createElement('li');
+                    logoutLi.innerHTML = `<a href="#" onclick="logout()">Logout</a>`;
+                    nav.appendChild(logoutLi);
+                }
+            }
+            
+            // Logout function
+            function logout() {
+                localStorage.removeItem('currentUser');
+                window.location.reload();
+            }
+            
+            // Update navigation on page load
+            updateNavigation();
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Register - Cooking School</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--Google fonts Link-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,700i" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <style>
+        :root {
+            --primary-wine: #7C2D12;
+            --secondary-ivory: #FFFBF5;
+            --accent-gold: #D97706;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--primary-wine) 0%, #5a1f0d 100%);
+            min-height: 100vh;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .register-container {
+            background: var(--secondary-ivory);
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(124, 45, 18, 0.2);
+            overflow: hidden;
+            width: 100%;
+            max-width: 450px;
+            padding: 40px;
+            border: 2px solid var(--accent-gold);
+        }
+        
+        .logo-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo-container img {
+            height: 60px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-container img:hover {
+            transform: scale(1.05);
+        }
+        
+        .brand-name {
+            color: var(--primary-wine);
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .brand-name:hover {
+            color: var(--accent-gold);
+        }
+        
+        .register-title {
+            text-align: center;
+            color: var(--primary-wine);
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            font-weight: 500;
+            color: var(--primary-wine);
+            margin-bottom: 8px;
+        }
+        
+        .form-control {
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 12px 15px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 0.2rem rgba(217, 119, 6, 0.25);
+            outline: none;
+        }
+        
+        .btn-register {
+            background: var(--primary-wine);
+            border: none;
+            border-radius: 8px;
+            color: var(--secondary-ivory);
+            font-weight: 600;
+            padding: 12px 30px;
+            width: 100%;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-register:hover {
+            background: #5a1f0d;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(124, 45, 18, 0.3);
+        }
+        
+        .login-link {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--accent-gold);
+        }
+        
+        .login-link p {
+            color: var(--primary-wine);
+            margin: 0;
+        }
+        
+        .login-link a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+        
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #c3e6cb;
+            display: none;
+        }
+        
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #f5c6cb;
+            display: none;
+        }
+        
+        .password-toggle {
+            position: relative;
+        }
+        
+        .password-toggle i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #999;
+        }
+        
+        .password-toggle i:hover {
+            color: var(--accent-gold);
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        .terms-checkbox {
+            margin-top: 20px;
+        }
+        
+        .terms-checkbox .form-check {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .terms-checkbox .form-check-label {
+            font-size: 14px;
+            color: var(--primary-wine);
+            line-height: 1.4;
+        }
+        
+        .terms-checkbox .form-check-label a {
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+        
+        .terms-checkbox .form-check-label a:hover {
+            text-decoration: underline;
+        }
+        
+        .password-strength {
+            margin-top: 5px;
+            font-size: 12px;
+        }
+        
+        .password-strength.weak {
+            color: #dc3545;
+        }
+        
+        .password-strength.medium {
+            color: var(--accent-gold);
+        }
+        
+        .password-strength.strong {
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <div class="logo-container">
+            <img src="assets/images/logo.png" alt="Cooking School" onclick="goHome()">
+            <h3 class="brand-name" onclick="goHome()">Cooking School</h3>
+        </div>
+        
+        <h2 class="register-title">Create Account</h2>
+        
+        <div class="success-message" id="successMessage">
+            Registration successful! Redirecting to login...
+        </div>
+        
+        <div class="error-message" id="errorMessage">
+            Registration failed. Please try again.
+        </div>
+        
+        <form id="registerForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName">First Name *</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" required placeholder="First name">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name *</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" required placeholder="Last name">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email">
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required placeholder="Enter your phone number">
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password *</label>
+                <div class="password-toggle">
+                    <input type="password" class="form-control" id="password" name="password" required placeholder="Create a password" onkeyup="checkPasswordStrength()">
+                    <i class="fa fa-eye" id="togglePassword" onclick="togglePassword()"></i>
+                </div>
+                <div class="password-strength" id="passwordStrength"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password *</label>
+                <div class="password-toggle">
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required placeholder="Confirm your password">
+                    <i class="fa fa-eye" id="toggleConfirmPassword" onclick="toggleConfirmPassword()"></i>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="experience">Cooking Experience</label>
+                <select class="form-control" id="experience" name="experience">
+                    <option value="">Select your experience level</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                    <option value="professional">Professional Chef</option>
+                </select>
+            </div>
+            
+            <div class="terms-checkbox">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="terms" required>
+                    <label class="form-check-label" for="terms">
+                        I agree to the <a href="#" onclick="showTerms()">Terms and Conditions</a> and <a href="#" onclick="showPrivacy()">Privacy Policy</a>
+                    </label>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn btn-register">Create Account</button>
+        </form>
+        
+        <div class="login-link">
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </div>
+
+    <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    
+    <script>
+        // Toggle password visibility
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggleIcon = document.getElementById('togglePassword');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.classList.remove('fa-eye');
+                toggleIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.classList.remove('fa-eye-slash');
+                toggleIcon.classList.add('fa-eye');
+            }
+        }
+        
+        function toggleConfirmPassword() {
+            const passwordInput = document.getElementById('confirmPassword');
+            const toggleIcon = document.getElementById('toggleConfirmPassword');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.classList.remove('fa-eye');
+                toggleIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.classList.remove('fa-eye-slash');
+                toggleIcon.classList.add('fa-eye');
+            }
+        }
+        
+        // Check password strength
+        function checkPasswordStrength() {
+            const password = document.getElementById('password').value;
+            const strengthElement = document.getElementById('passwordStrength');
+            
+            if (password.length === 0) {
+                strengthElement.textContent = '';
+                strengthElement.className = 'password-strength';
+                return;
+            }
+            
+            let strength = 0;
+            
+            // Length check
+            if (password.length >= 8) strength++;
+            if (password.length >= 12) strength++;
+            
+            // Character variety checks
+            if (/[a-z]/.test(password)) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^a-zA-Z0-9]/.test(password)) strength++;
+            
+            if (strength <= 2) {
+                strengthElement.textContent = 'Weak password';
+                strengthElement.className = 'password-strength weak';
+            } else if (strength <= 4) {
+                strengthElement.textContent = 'Medium password';
+                strengthElement.className = 'password-strength medium';
+            } else {
+                strengthElement.textContent = 'Strong password';
+                strengthElement.className = 'password-strength strong';
+            }
+        }
+        
+        // Navigate to home page
+        function goHome() {
+            window.location.href = 'index2.html';
+        }
+        
+        // Show terms and conditions
+        function showTerms() {
+            alert('Terms and Conditions:\n\n1. Users must be 18 years or older\n2. All information provided must be accurate\n3. Users agree to respect cooking school policies\n4. Privacy of user information is guaranteed\n5. Cooking school reserves right to terminate accounts for violation of terms');
+        }
+        
+        // Show privacy policy
+        function showPrivacy() {
+            alert('Privacy Policy:\n\n1. We collect personal information for registration purposes\n2. Information is stored securely and not shared with third parties\n3. Users can request deletion of their data at any time\n4. We use cookies to improve user experience\n5. Payment information is encrypted and secure');
+        }
+        
+        // Registration form submission
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Hide any existing messages
+            document.getElementById('successMessage').style.display = 'none';
+            document.getElementById('errorMessage').style.display = 'none';
+            
+            // Get form values
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const experience = document.getElementById('experience').value;
+            const termsAccepted = document.getElementById('terms').checked;
+            
+            // Basic validation
+            if (!firstName || !lastName || !email || !phone || !password || !confirmPassword) {
+                document.getElementById('errorMessage').textContent = 'Please fill in all required fields.';
+                document.getElementById('errorMessage').style.display = 'block';
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('errorMessage').textContent = 'Please enter a valid email address.';
+                document.getElementById('errorMessage').style.display = 'block';
+                return;
+            }
+            
+            // Phone validation
+            const phoneRegex = /^[\d\s\-\+\(\)]+$/;
+            if (!phoneRegex.test(phone)) {
+                document.getElementById('errorMessage').textContent = 'Please enter a valid phone number.';
+                document.getElementById('errorMessage').style.display = 'block';
+                return;
+            }
+            
+            // Password validation
+            if (password.length < 6) {
+                document.getElementById('errorMessage').textContent = 'Password must be at least 6 characters long.';
+                document.getElementById('errorMessage').style.display = 'block';
+                return;
+            }
+            
+            if (password !== confirmPassword) {
+                document.getElementById('errorMessage').textContent = 'Passwords do not match.';
+                document.getElementById('errorMessage').style.display = 'block';
+                return;
+            }
+            
+            if (!termsAccepted) {
+                document.getElementById('errorMessage').textContent = 'You must accept the terms and conditions.';
+                document.getElementById('errorMessage').style.display = 'block';
+                return;
+            }
+            
+            // Check if user already exists
+            const users = JSON.parse(localStorage.getItem('users') || '[]');
+            const existingUser = users.find(u => u.email === email);
+            
+            if (existingUser) {
+                document.getElementById('errorMessage').textContent = 'An account with this email already exists.';
+                document.getElementById('errorMessage').style.display = 'block';
+                return;
+            }
+            
+            // Create new user
+            const newUser = {
+                id: Date.now(),
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                phone: phone,
+                password: password,
+                experience: experience,
+                role: 'user',
+                createdAt: new Date().toISOString()
+            };
+            
+            // Save user to localStorage
+            users.push(newUser);
+            localStorage.setItem('users', JSON.stringify(users));
+            
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Reset form
+            this.reset();
+            document.getElementById('passwordStrength').textContent = '';
+            document.getElementById('passwordStrength').className = 'password-strength';
+            
+            // Redirect to login after 2 seconds
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 2000);
+        });
+        
+        // Check if user is already logged in
+        window.addEventListener('load', function() {
+            const currentUser = localStorage.getItem('currentUser');
+            if (currentUser) {
+                window.location.href = 'dashboard.html';
+            }
+        });
+    </script>
+</body>
+</html>
